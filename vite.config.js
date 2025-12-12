@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
     plugins: [react()],
-    base: "/Travel_Tourism/" // 🔴 VERY IMPORTANT
+    base: "/Travel_Tourism/"
 })
