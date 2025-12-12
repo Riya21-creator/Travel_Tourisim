@@ -1,0 +1,72 @@
+.about-container {
+    min-height: 100vh;
+    padding: 80px 20px;
+    background: url("https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* TITLE */
+
+.about-container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #004d73;
+    margin-bottom: 10px;
+}
+
+
+/* SUBTITLE */
+
+.about-container p.subtitle {
+    font-size: 1.2rem;
+    color: #0a3d62;
+    margin-bottom: 40px;
+}
+
+
+/* CONTENT BOX */
+
+.about-box {
+    width: 90%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.65);
+    padding: 25px 35px;
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* TITLE INSIDE BOX */
+
+.about-box h2 {
+    margin-bottom: 15px;
+    color: #003b55;
+}
+
+
+/* WHY CHOOSE US FEATURES */
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}

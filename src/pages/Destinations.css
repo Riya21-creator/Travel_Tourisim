@@ -1,0 +1,86 @@
+.dest-container {
+    padding: 40px 70px;
+    background: #f7f7f7;
+    min-height: 100vh;
+}
+
+.dest-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 35px;
+    color: #333;
+}
+
+.dest-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.dest-card {
+    background: #fff;
+    border-radius: 12px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.dest-card:hover {
+    transform: translateY(-5px);
+}
+
+.dest-card img {
+    width: 100%;
+    height: 210px;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+}
+
+.dest-card h3 {
+    margin-top: 15px;
+    font-size: 22px;
+    color: #333;
+}
+
+.dest-card p {
+    margin: 10px;
+    font-size: 17px;
+    color: #555;
+}
+
+.dest-card p span {
+    font-weight: bold;
+    color: #ff6b00;
+}
+
+.dest-card button {
+    margin-top: 10px;
+    padding: 10px 25px;
+    background: #ff6b00;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dest-card button:hover {
+    background: #e05d00;
+}
+
+
+/* Responsive */
+
+@media (max-width: 992px) {
+    .dest-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .dest-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
