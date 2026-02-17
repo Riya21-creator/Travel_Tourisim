@@ -1,9 +1,6 @@
 import "./Home.css";
 import { FaPlane, FaHotel, FaGlobeAsia, FaCar } from "react-icons/fa";
-import rameshwaram from "../assets/packages/rameshwaram.jpg";
-import mizoram from "../assets/packages/mizoram.jpg";
-import dal from "../assets/packages/dal_lake.jpg";
-import Udaipur from "../assets/udaipur.jpg";
+
 import { useRef } from "react";
 
 function Home() {
@@ -53,7 +50,7 @@ function Home() {
 
 
   <div className="carousel-card">
-  <img src={Udaipur} alt="Udaipur" />
+  <img src="/udaipur.jpg" alt="Udaipur" />
   <h3>Udaipur</h3>
 </div>
 
@@ -121,21 +118,21 @@ function Home() {
   <div className="package-list">
 
     <div className="package-card">
-      <img src={rameshwaram} alt="Rameshwaram" />
+      <img src="/rameshwaram.jpg" alt="Rameshwaram" />
       <h3>Rameshwaram</h3>
       <p>₹45,000 / 5 Days</p>
       <button>Book Now</button>
     </div>
 
     <div className="package-card">
-      <img src={mizoram} alt="Mizoram" />
+      <img src="/mizoram.jpg" alt="Mizoram" />
       <h3>Mizoram</h3>
       <p>₹30,000 / 4 Days</p>
       <button>Book Now</button>
     </div>
 
     <div className="package-card">
-      <img src={dal} alt="Dal Lake" />
+      <img src="/dal_lake.jpg" alt="Dal Lake" />
       <h3>Dal Lake</h3>
       <p>₹22,000 / 6 Days</p>
       <button>Book Now</button>
@@ -163,3 +160,4 @@ function Home() {
 }
 
 export default Home;
+
