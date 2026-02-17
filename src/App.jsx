@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 import Home from "./pages/Home";
@@ -13,10 +13,12 @@ import Payment from "./pages/Payment";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Navbar />
+
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/destinations" element={<Destinations />} />
         <Route path="/packages" element={<Packages />} />
@@ -24,9 +26,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-         <Route path="/payment" element={<Payment />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
