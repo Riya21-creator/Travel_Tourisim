@@ -5,7 +5,7 @@ const packagesData = [
     id: 1,
     title: "Goa Beach Vacation",
     price: "₹12,999",
-    img: "/assets/goa.jpg",
+    img: "/assests/goa.jpg",
     description: "3 Nights & 4 Days — Beach tours, water sports, and nightlife."
   },
   {
