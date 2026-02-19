@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouterRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 import Home from "./pages/Home";
@@ -13,7 +13,7 @@ import Payment from "./pages/Payment";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
 
       <Routes>
@@ -28,7 +28,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/payment" element={<Payment />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
