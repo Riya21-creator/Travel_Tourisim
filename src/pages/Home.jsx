@@ -1,10 +1,41 @@
 import "./Home.css";
 import { FaPlane, FaHotel, FaGlobeAsia, FaCar } from "react-icons/fa";
-
+import { useState } from "react";
 import { useRef } from "react";
+
+
 
 function Home() {
   const trackRef = useRef(null);
+   // ✅ AI States
+  const [budget, setBudget] = useState(5000);
+  const [travelType, setTravelType] = useState("Solo");
+  const [response, setResponse] = useState("");
+
+  const handleAI = async () => {
+  console.log("Button Clicked ✅");
+
+  try {
+    const res = await fetch("http://localhost:5000/ai-trip", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        budget,
+        travelType,
+      }),
+    });
+
+    const data = await res.json();
+    console.log("Response:", data);
+    setResponse(data.result);
+  } catch (error) {
+    console.error("Error:", error);
+    setResponse("Something went wrong. Please try again.");
+  }
+};
+
 
   const nextSlide = () => {
     trackRef.current.scrollBy({ left: 320, behavior: "smooth" });
@@ -13,6 +44,8 @@ function Home() {
   const prevSlide = () => {
     trackRef.current.scrollBy({ left: -320, behavior: "smooth" });
   };
+  
+
   return (
     <div className="home">
       {/* ⭐ HERO SECTION (SHOULD BE FIRST) */}
@@ -37,6 +70,40 @@ function Home() {
           <button>Search</button>
   </div>
 </section>
+          {/* 🤖 AI TRIP PLANNER */}
+        <section className="ai-planner">
+        <h2>AI Trip Planner</h2>
+
+        <input
+          type="range"
+          min="1000"
+          max="20000"
+          value={budget}
+          onChange={(e) => setBudget(e.target.value)}
+        />
+        <p>Budget: ₹{budget}</p>
+
+        <select
+          value={travelType}
+          onChange={(e) => setTravelType(e.target.value)}
+        >
+          <option>Solo</option>
+          <option>Family</option>
+          <option>Couple</option>
+          <option>Friends</option>
+        </select>
+
+        <br /><br />
+
+        <button type="button" onClick={handleAI}>
+        Plan with AI
+        </button>
+
+        <pre style={{ textAlign: "left", marginTop: "20px" }}>
+          {response}
+        </pre>
+      </section>
+
 
        
 
